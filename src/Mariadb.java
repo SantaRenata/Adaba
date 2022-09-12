@@ -27,9 +27,8 @@ public class Mariadb implements Database{
     }
 
     public void closeDb(Connection con){
-        
-    }
 
+    }
     public void trycloseDb(Connection con){
 
     }
