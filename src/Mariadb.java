@@ -11,13 +11,12 @@ public class Mariadb implements Database{
         } catch (SQLException e) {
             System.err.println("Hiba! A kapcsolódás sikertelen!");
         }
-
         return con;
     }
 
     public Connection tryConnectDb() throws SQLException{
         Connection con = null;
-        String url = "jdb.mariadb://localhost:3306/adaba";
+        String url = "jdbc:mariadb://localhost:3306/adaba";
 
         String user = "adaba";
         String pass = "titok";
@@ -28,6 +27,10 @@ public class Mariadb implements Database{
     }
 
     public void closeDb(Connection con){
+        
+    }
+
+    public void trycloseDb(Connection con){
 
     }
 
