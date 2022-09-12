@@ -5,7 +5,7 @@ collate utf8_hungarian_ci
 character set utf8;
 
 grand all privileges
-on adaba
+on adaba.*
 to adaba@localhost
 identified by 'titok';
 

@@ -27,9 +27,15 @@ public class Mariadb implements Database{
     }
 
     public void closeDb(Connection con){
-
+        try {
+            trycloseDb(con);
+        } catch (SQLException e) {
+            System.err.println("Hiba! Bezárás sikertelen");
+        }
     }
-    public void trycloseDb(Connection con){
+    
+    public void trycloseDb(Connection con) throws SQLException{
+        con.close();
 
     }
 
